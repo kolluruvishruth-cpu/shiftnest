@@ -1,0 +1,10 @@
+.env
+.env.*
+!.env.example
+.tools/
+build/
+artifacts/
+*.log
+node_modules/
+test-results/
+output/
