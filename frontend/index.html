@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#29483D" />
+    <title>ShiftNest · A little more balance</title>
+    <link rel="stylesheet" href="/styles.css" />
+    <script src="/app.js" defer></script>
+  </head>
+  <body>
+    <div id="login" class="login-shell">
+      <section class="login-story">
+        <a class="wordmark" href="/"
+          >▥ ShiftNest<span>WORK, WELL ARRANGED.</span></a
+        >
+        <div>
+          <span class="eyebrow">A LITTLE MORE BALANCE</span>
+          <h1>Good weeks<br />start with a<br />thoughtful plan.</h1>
+          <p>
+            The right people. A fair share of hours.<br />A schedule everyone
+            can count on.
+          </p>
+          <div class="story-note">
+            <span>01 /</span> Plan with care. Give your team room to thrive.
+          </div>
+        </div>
+        <small>Built for people. Grounded in algorithms.</small>
+      </section>
+      <main class="login-form">
+        <div>
+          <span class="eyebrow">YOUR WORK WEEK, TOGETHER</span>
+          <h2>Welcome to the nest.</h2>
+          <p>Sign in to find your place in the week ahead.</p>
+          <form id="login-form">
+            <label
+              >Work email<input
+                name="email"
+                type="email"
+                autocomplete="username"
+                required
+                placeholder="you@company.com" /></label
+            ><label
+              >Password<input
+                name="password"
+                type="password"
+                autocomplete="current-password"
+                required
+                placeholder="Your password"
+            /></label>
+            <p id="login-error" class="error" role="alert"></p>
+            <button class="primary full" type="submit">
+              Sign in <span>↗</span>
+            </button>
+          </form>
+          <p class="small muted">
+            Your manager provides your account. Demo accounts are configured
+            during database seeding.
+          </p>
+          <div class="login-foot">
+            SHIFTNEST <span>Consider the whole team.</span>
+          </div>
+        </div>
+      </main>
+    </div>
+    <div id="app" hidden>
+      <aside class="sidebar">
+        <a class="wordmark" href="/"
+          >▥ ShiftNest<span>WORK, WELL ARRANGED.</span></a
+        ><span class="nav-label">WORKSPACE</span>
+        <nav id="nav" aria-label="Main navigation"></nav>
+        <div class="sidebar-bottom">
+          <div class="nest-note">
+            <span>THE WEEKLY PERSPECTIVE</span>
+            <p>A well-planned week<br />makes space for everyone.</p>
+            <i>―</i>
+          </div>
+          <div class="profile">
+            <span id="avatar">SN</span>
+            <div>
+              <strong id="profile-name"></strong
+              ><small id="profile-role"></small>
+            </div>
+          </div>
+        </div>
+      </aside>
+      <div class="workspace">
+        <header class="topbar">
+          <span id="breadcrumb">Workspace / <b>Overview</b></span>
+          <div>
+            <span class="timezone" id="timezone"></span
+            ><button
+              id="notification-shortcut"
+              class="notification-button"
+              aria-label="Open notifications"
+            >
+              ♧ <span id="unread">0</span>
+            </button>
+            <button id="logout" class="signout-button" type="button">
+              Sign out
+            </button>
+          </div>
+        </header>
+        <main id="main" tabindex="-1"></main>
+        <footer class="app-footer">
+          ShiftNest <span>A little more balance in every week.</span
+          ><small>Wages are estimates based on scheduled hours.</small>
+        </footer>
+      </div>
+    </div>
+    <dialog id="dialog">
+      <div class="dialog-top">
+        <h2 id="dialog-title"></h2>
+        <button id="close-dialog" aria-label="Close dialog">×</button>
+      </div>
+      <form id="dialog-form"></form>
+    </dialog>
+    <div id="toast" role="status" aria-live="polite"></div>
+  </body>
+</html>

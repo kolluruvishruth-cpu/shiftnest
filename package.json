@@ -1,0 +1,7 @@
+{
+  "name": "shiftnest-development-tools",
+  "private": true,
+  "description": "Browser tests and formatting only. The ShiftNest application backend is C17.",
+  "scripts": { "test:browser": "node tests/browser.mjs", "format:web": "prettier --write frontend/*", "format:c": "clang-format -i backend/*.c backend/*.h tests/*.c" },
+  "devDependencies": { "playwright": "1.56.1", "prettier": "3.6.2", "clang-format": "1.8.0" }
+}
